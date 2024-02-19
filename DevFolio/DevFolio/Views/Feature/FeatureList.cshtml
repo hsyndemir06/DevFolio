@@ -1,0 +1,29 @@
+﻿@model List<DevFolio.Models.TblFeature>
+
+@{
+    ViewBag.Title = "FeatureList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>FeatureList</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>id</th>
+        <th>baslik</th>
+        <th>açıklama</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.FeatureID</td>
+            <td>@x.HeaderTitle</td>
+            <td>@x.HeaderDescription</td>
+            <td><a href="/Feature/DeleteFeature/@x.FeatureID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Feature/UpdateFeature/@x.FeatureID" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Feature/AddFeature/" class="btn btn-info">ekle</a>

@@ -1,0 +1,27 @@
+﻿@model List<DevFolio.Models.TblService>
+
+@{
+    ViewBag.Title = "ServiceList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>HizmetlerListesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>id</th>
+        <th>HizmetAdı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ServiceID</td>
+            <td>@x.ServiceTitle</td>
+            <td><a href="/Service/DeleteService/@x.ServiceID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Service/UpdateService/@x.ServiceID" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a class="btn btn-info" href="/Service/AddService/">Yeni Hizmet Ekle</a>

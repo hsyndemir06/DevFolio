@@ -1,0 +1,18 @@
+﻿@model DevFolio.Models.TblProject
+
+@{
+    ViewBag.Title = "UpdateProject";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>UpdateProject</h2>
+
+<form method="post">
+    <label>Proje id</label>
+    <input type="text" class="form-control" name="ProjectID" value="@Model.ProjectID" />
+    <br />
+    <label>Baglantı Yolu</label>
+    <input type="text" name="CoverImageUrl" value="@Model.CoverImageUrl" />
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+</form>

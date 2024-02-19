@@ -1,0 +1,32 @@
+﻿@model List<DevFolio.Models.TblContact>
+
+@{
+    ViewBag.Title = "MessageList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+@*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
+<br />
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>Mesaj No</th>
+            <th>Gonderen</th>
+            <th>Konu</th>
+
+        </tr>
+        @foreach (var x in Model)
+        {
+
+            <tr>
+                <td>@x.ContactID</td>
+                <td>@x.NameSurname</td>
+                <td>@x.Subject</td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+

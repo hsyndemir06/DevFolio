@@ -1,0 +1,41 @@
+﻿@model List<DevFolio.Models.TblAdress>
+
+@{
+    ViewBag.Title = "iletisim";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+
+    
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Açık Adres</th>
+            <th>Konum</th>
+            <th>telefon</th>
+            <th>Mail</th>
+
+        </tr>
+        @foreach (var x in Model)
+        {
+
+            <tr>
+                <td>@x.Description</td>
+                <td>@x.Location</td>
+                <td>@x.PhoneNumber</td>
+                <td>@x.Email</td>
+            </tr>
+        }
+
+    </table>
+
+  
+
+    
+
+
+
+
+

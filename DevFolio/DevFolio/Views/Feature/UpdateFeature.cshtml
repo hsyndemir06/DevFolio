@@ -1,0 +1,17 @@
+﻿@model DevFolio.Models.TblFeature
+@{
+    ViewBag.Title = "UpdateFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>UpdateFeature</h2>
+
+<form method="post">
+    <label>id</label>
+    <input type="text" class="form-control " name="FeatureID" value="@Model.FeatureID" />
+    <br />
+    <label>baslık</label>
+    <input type="text" class="form-control" name="HeaderTitle" value="@Model.HeaderTitle" />
+    <br />
+    <button class="btn btn-warning">güncelle</button>
+</form>

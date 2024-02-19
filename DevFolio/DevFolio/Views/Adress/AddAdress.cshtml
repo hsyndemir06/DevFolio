@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "AddAdress";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>AddAdress</h2>
+
+<form  method="post">
+    <label>acıklama</label>
+    <input type="text" class="form-control" name="Description" />
+    <br />
+    <label>Lokasyon</label>
+    <input type="text" class="form-control" name="Location" value="" />
+    <br />
+    <label>Telefon</label>
+    <input type="text" class="form-control" name="PhoneNumber"  />
+    <br />
+    <label>Mail</label>
+    <input type="text" class="form-control" name="Email" value="" />
+    <br />
+    <button class="btn btn-primary">Kaydet </button>
+</form>

@@ -1,0 +1,28 @@
+﻿@model List<DevFolio.Models.TblAbout>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>Hakkımda</th>
+            
+
+        </tr>
+        @foreach (var x in Model)
+        {
+
+            <tr>
+                <td>@x.Description</td>
+              
+            </tr>
+        }
+
+    </table>
+</div>
+
+

@@ -1,0 +1,35 @@
+﻿@model List<DevFolio.Models.TblSocialMedia>
+
+
+@{
+    ViewBag.Title = "SocialMediaList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>SocialMediaList</h2>
+<hr />
+
+<table class="table table-bordered">
+    <tr class="text-center">
+        <th>id</th>
+        <th>Başlık</th>
+        <th>Durum</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr class="text-center">
+            <td>@x.SocialMedia</td>
+            <td>@x.PlatformName</td>
+            <td>@x.Status</td>
+            <td><a href="/SocialMedia/DeleteSocialMedia/@x.SocialMedia" class="btn btn-danger">Sil</a></td>
+            <td><a href="/SocialMedia/UpdateSocialMedia/@x.SocialMedia" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+    
+</table>
+
+<a href="/SocialMedia/AddSocialMedia/" class="btn btn-info">YeniSosyalMediaGirisi</a>
+<hr />
